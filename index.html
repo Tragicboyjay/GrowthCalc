@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator | Growth Calc &trade;</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/d75e165c56.js" crossorigin="anonymous" defer></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <img src="favicon.png" alt="Growth Calc Logo">
+        <h1>Growth Calc &trade;</h1>
+    </nav>
+
+    <div class="container">
+        <h3>Find out how your investment will grow over time with compound interest.</h3>
+        
+        <div class="formContainer" id="formContainer">
+            <p id="errorMessage"></p>
+            <div class="row">
+                <label for="initialInvestment">Initial Investment ($)</label>
+                <input type="number" name="initialInvestment" id="initialInvestment" value="0">
+            </div>
+            <div class="row">
+                <label for="regularContribution">Regular Contribution ($)</label>
+                <input type="number" name="regularContribution" id="regularContribution" value="0">
+            </div>
+            <div class="row">
+                <label for="contributionFrequency">Contribution Frequency</label>
+                <select name="contributionFrequency" id="contributionFrequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="biWeekly">Bi-weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="interestRate">Interest Rate (%)</label>
+                <input type="number" name="interestRate" id="interestRate" value="0.00">
+            </div>
+            <div class="row">
+                <label for="yearsToGrow">Years To Grow</label>
+                
+                <input type="number" id="yearsToGrow" name="yearsToGrow" value="10">
+        
+            </div>
+            <button id="calculateButton" type="button">Calculate</button>
+
+        </div>
+        <div  id="resultsGroup">
+            
+            <h1>Results</h1>
+            
+            <div class="resultsContainer">
+                <div>
+                    <p>Total value of your investment:</p>
+                    <h1 id="totalValue"></h1>
+                </div>
+                
+                <div>
+                    <p>Total interest earned:</p>
+                    <h1 id="totalInterest"></h1>
+                </div>
+                
+    
+            </div>
+            
+            <p id="summary"></p>
+
+            <p id="disclaimer">Any results or calculations displayed on this site are made available for information purposes only, and do not constitute financial or legal advice. By using this calculator, you agree to our <a href="">Website and Social Media Terms of Use and Privacy Policy.</a></p>
+        
+            <div class="assumptions">
+                <div class="head">
+                    <h3>Assumptions</h3>
+                    <button type="button" id="assumptionsButton"><i class="fa-solid fa-angle-down" style="color: black;"></i></button>
+                </div>
+
+                <div id="assumptionsText">
+                    <p style="text-align: justify;">
+                        For the purpose of this calculation, we consider an initial investment amount, regular contributions, an annual interest rate, and a specified investment horizon. The interest income compounds according to the selected compounding frequency, with additional contributions applied at the end of each chosen period. <br> <br> Results are displayed for each compounding period, taking into account contribution frequencies that exceed the compounding period. For instance, if you make weekly contributions with monthly compounding, the calculations distribute the annual contributions evenly over the 12 months, each consisting of approximately 4.33 weeks.
+                    </p>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <footer>
+        <p>Growth Calc &trade; | Developped By Justice Manly <a href="https://github.com/Tragicboyjay"><i class="fa-brands fa-github links"></i></a> <a href="https://www.linkedin.com/in/justicemanly/"><i class="links fa-brands fa-linkedin"></i></a></p>
+    </footer> 
+</body>
+</html>
