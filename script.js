@@ -134,7 +134,12 @@ const compoundCalculation = () => {
 
         errorHandling('Interest rate may not exceed 30%');
 
-    }else if (initialInvestment == 0 && regularContribution == 0 && interestRate == 0 && yearsToGrow == 0) {
+    } else if (fullValue == 0){
+        
+        errorHandling('Please add values so result will not be 0');
+        
+    }
+    else if (initialInvestment == 0 && regularContribution == 0 && interestRate == 0 && yearsToGrow == 0) {
 
         errorHandling('All values cannot be 0');
 
